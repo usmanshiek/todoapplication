@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Firebase ToDo App</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
+        crossorigin="anonymous">
+
+        <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.1/css/mdb.min.css">
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.1/js/mdb.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="row">
+<div class="col-md-4 text-center" style="background : white;">
+    <!-- Content goes here -->
+<div class="iphone-x">
+    <div class="divider"></div>
+    <div class="bezel"></div>
+    <div class="screen" style="background : white;">
+
+        <div class="wrapper">
+            <div id="todo_cards" class="posts">
+
+                <!-- PLACE CARDS ON SCREEN -->
+            </div>
+        </div>
+
+    </div>
+    <div class="speaker"></div>
+    <div class="camera"></div>
+    <div class="button mute"></div>
+    <div class="button vol-up"></div>
+    <div class="button vol-down"></div>
+    <div class="button right"></div>
+    <div class="divider"></div>
+</div>
+</div>
+<div class="col-md-8 text-center" style="background : #222222">
+    <!-- Content goes here -->
+    
+    <div class="wrapper2">
+        <div class="post" style="background:white; height:200px;">
+            <textarea readonly id="card_text" type="text" class="form-control" style="color:black; text-align:center;
+            width:100%;height:100%;border:none;padding:3%;"></textarea>
+
+        </div>
+        
+        
+    </div>
+    <div class="form-group">
+        <textarea class='autoExpand' id="todo" rows='3' data-min-rows='3' placeholder='ToDo ...'
+        style="border-radius:17px;padding:1%;max-height:220px; max-width:800px; ; color:white;text-align:center;"></textarea>
+    </div>
+
+    <!-- <button type="button" class="btn btn-default btn-circle btn-xl"><i class="glyphicon glyphicon-ok"></i></button> -->
+    <button type="button" id="submitBtn" onclick="submitCard()" class="btn btn-outline-info">Submit</button>
+    <button type="button" id="reset" onclick="Reset()" class="btn btn-outline-danger">RESET</button>
+
+</div>
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/4.6.0/firebase.js"></script>
+<script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyD0HDzrXxEutwhij2lGOPIcqHTgXTDKLCw",
+        authDomain: "todo-1345.firebaseapp.com",
+        databaseURL: "https://todo-1345.firebaseio.com",
+        projectId: "todo-1345",
+        storageBucket: "",
+        messagingSenderId: "607752140286"
+    };
+    firebase.initializeApp(config);
+
+</script>
+<script src="app.js"></script>
+</body>
+</html>
